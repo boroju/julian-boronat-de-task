@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# Configuration files
+config.ini
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
 # Distribution / packaging
 .Python
 build/
