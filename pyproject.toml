@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "julian-boronat-de-task"
+version = "1.0.0"
+description = "Processing data from New York Times Books API list overview endpoint for the years 2021 to 2023."
+authors = ["Julian Boronat <boronat.j.e@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4"
+requests = "^2.31.0"
+python-dotenv = "^1.0.1"
+duckdb = "^0.10.2"
+pandas = "^2.2.2"
+logging = "^0.4.9.6"
+backoff = "^2.2.1"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
