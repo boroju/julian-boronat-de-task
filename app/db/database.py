@@ -6,8 +6,8 @@ class DuckDBDatabase:
 
     def __init__(self, db_path: str, ddl_folder: str = "ddl"):
         self.db_path = db_path
-        self.con = None
         self.ddl_folder = ddl_folder
+        self.con = None
 
     def connect(self):
         """ Establishes a connection to the DuckDB database. """
@@ -20,14 +20,6 @@ class DuckDBDatabase:
         if self.con:
             self.con.close()
             self.con = None
-
-    def create_database(self):
-        """
-        Creates a DuckDB database file if it doesn't exist.
-        """
-        if not os.path.isfile(self.db_path):
-            with open(self.db_path, 'w') as f:
-                pass  # Create an empty file to mark the database
 
     def create_tables_from_files(self):
         """
