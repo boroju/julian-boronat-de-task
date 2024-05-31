@@ -12,8 +12,8 @@ nytimes_loader = NYTimesListsOverviewLoader(load_type="lists",
                                             api_host=os.getenv('NYTIMES_HOST'))
 
 response = nytimes_loader.get_lists_request_json("2021-01-01")
-
-list_df, books_df, buy_links_df = nytimes_loader.parse_api_response(response)
+print(response)
+bestsellers_df, list_df, books_df, buy_links_df = nytimes_loader.parse_api_response(response, "2021-01-01")
 
 print("=====================================")
 
