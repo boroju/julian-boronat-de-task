@@ -1,0 +1,13 @@
+version: 1.2
+
+vars:
+  schema: main
+
+tests:
+  - name: Test connection to DuckDB
+    sql: SELECT 1;  # Simple query to check connection
+
+  - name: Check if table exists (optional)
+    sql: SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'dim_bestsellers';
+    results:
+      - table_name: dim_bestsellers

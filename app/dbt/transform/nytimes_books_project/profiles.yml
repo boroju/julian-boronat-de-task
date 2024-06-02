@@ -1,0 +1,13 @@
+nytimes_books_project:
+  outputs:
+    dev:
+      type: duckdb
+      path: nytimes_books.duckdb
+      threads: 1
+
+    prod:
+      type: duckdb
+      path: nytimes_books.duckdb
+      threads: 4
+
+  target: dev
